@@ -10,8 +10,8 @@ class Rysh < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_darwin_amd64.tar.gz"
-      sha256 "a960ad588d6eed213cf7674b4fa26ecbe99650d9289bda5238b04d48088ce5ef"
+      url "https://packages.rysh.ai/releases/v0.1.0/rysh_darwin_amd64.tar.gz"
+      sha256 "67d9e2cd3e2ba24f79785c08a477f63d97366b0ed17981e30348f30479aeb4c2"
 
       define_method(:install) do
         bin.install "rysh"
@@ -20,8 +20,8 @@ class Rysh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_darwin_arm64.tar.gz"
-      sha256 "ba46a3f66122d35360565c6fe9dd299e16536d86aed4750ae807829c814b6e28"
+      url "https://packages.rysh.ai/releases/v0.1.0/rysh_darwin_arm64.tar.gz"
+      sha256 "b39ac61d1d88d7bf3fcc7a9eb3695c2631136c06c47da2961ac2e051fa33f605"
 
       define_method(:install) do
         bin.install "rysh"
@@ -33,8 +33,8 @@ class Rysh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_linux_amd64.tar.gz"
-      sha256 "1bb3b725dc065d995084cbb28d788519206ac88283e5499a33ef8fc317f492ae"
+      url "https://packages.rysh.ai/releases/v0.1.0/rysh_linux_amd64.tar.gz"
+      sha256 "7367d87c03d4f8421da65b3dcf4dac02db65606d35c30787ba3d9a531402c442"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
@@ -42,8 +42,8 @@ class Rysh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_linux_arm64.tar.gz"
-      sha256 "1da40f3e5069e4e5a9b0470ff1ae7ff8f751b5a49f21819bf9bf896130d5e407"
+      url "https://packages.rysh.ai/releases/v0.1.0/rysh_linux_arm64.tar.gz"
+      sha256 "19ee244d4925e74269a363407a121309269b73609d6d6ef446446dc1db8fddfe"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
