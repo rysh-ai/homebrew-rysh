@@ -11,7 +11,7 @@ class Rysh < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_darwin_amd64.tar.gz"
-      sha256 "f0214bb8cb0c94015d0a117927476f28082396cca4886b2a3911d16e61e2e4dc"
+      sha256 "61424972d64cb1228683e22cee99490049a98df590bd9f20d0d2ceb1eb880bf4"
 
       define_method(:install) do
         bin.install "rysh"
@@ -21,7 +21,7 @@ class Rysh < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_darwin_arm64.tar.gz"
-      sha256 "0ffeeb7df47114d2e84fac6d128dd4d5055e400d4bfca7e0df3818f05c93b24d"
+      sha256 "1e17d6a2d30ce1d2fe62223399a9334ee5b31e050f549623675407ac656b53f7"
 
       define_method(:install) do
         bin.install "rysh"
@@ -34,7 +34,7 @@ class Rysh < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_linux_amd64.tar.gz"
-      sha256 "e34ee712b58f9687af57e85459880d0953a961ed57347336a931a6db0337aee4"
+      sha256 "264eab123b0a12a10a09de08baf86abb38c8bbe1dd799dcd60cc9b3f8f11b21f"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
@@ -43,7 +43,7 @@ class Rysh < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/rysh-ai/rysh-cli/releases/download/v0.1.0/rysh_linux_arm64.tar.gz"
-      sha256 "62fb80166391ea06936ef5f68e21e44cf1a2ce619b3b13dc4cbdd56ed9b23737"
+      sha256 "fb1920c49d57dc52e40d658f89bef7a5432b65a0b5e31832d108b7e534b5cca6"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
