@@ -5,13 +5,13 @@
 class Rysh < Formula
   desc "Agentic terminal multiplexer for code development"
   homepage "https://rysh.ai"
-  version "0.1.5"
+  version "0.1.6"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://packages.rysh.ai/releases/v0.1.5/rysh_darwin_amd64.tar.gz"
-      sha256 "e29d1410baf6cdde992774e29144c470511387587a32b8065bbb55f86fd0b2b4"
+      url "https://packages.rysh.ai/releases/v0.1.6/rysh_darwin_amd64.tar.gz"
+      sha256 "24b89c28bd3d5a27f437c705465242aac7fc4dad60c21a513355a9b5daba0ad3"
 
       define_method(:install) do
         bin.install "rysh"
@@ -20,8 +20,8 @@ class Rysh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://packages.rysh.ai/releases/v0.1.5/rysh_darwin_arm64.tar.gz"
-      sha256 "406458132af1327db572ba4b91edb3b1663bfe629a9ae4d023c0bd0d9d95563c"
+      url "https://packages.rysh.ai/releases/v0.1.6/rysh_darwin_arm64.tar.gz"
+      sha256 "809170649822692d26f1ffd5a85888ff1049bc7e5e8a9fd9c0be90d3fd8b67e8"
 
       define_method(:install) do
         bin.install "rysh"
@@ -33,8 +33,8 @@ class Rysh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://packages.rysh.ai/releases/v0.1.5/rysh_linux_amd64.tar.gz"
-      sha256 "79df4c1d15071fd9a3b6e47b27fb8c5d5da3b7d1ae5ec95a11f64e23c0c2be48"
+      url "https://packages.rysh.ai/releases/v0.1.6/rysh_linux_amd64.tar.gz"
+      sha256 "16752dee5229d57eafa2151eab70a3e9f68e4f860b88b22933e980ae50ded8bc"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
@@ -42,8 +42,8 @@ class Rysh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://packages.rysh.ai/releases/v0.1.5/rysh_linux_arm64.tar.gz"
-      sha256 "5269344d581bf2ce59a4d34ebf28864d122aa3d31573a9b4387c8a7cc2cf91bc"
+      url "https://packages.rysh.ai/releases/v0.1.6/rysh_linux_arm64.tar.gz"
+      sha256 "86df677f65da2e09fe37c7aaaac0ca784968dcf0cfe00a6f9152e60843ebdb03"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
