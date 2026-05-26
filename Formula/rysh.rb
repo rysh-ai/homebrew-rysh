@@ -5,49 +5,49 @@
 class Rysh < Formula
   desc "Agentic terminal multiplexer for code development"
   homepage "https://rysh.ai"
-  version "0.1.9"
+  version "0.1.10"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://packages.rysh.ai/releases/v0.1.9/rysh_darwin_amd64.tar.gz"
-      sha256 "21c5fdc052b4059ad6d75cb92ec6521b11e52a8e44cbf96397aba988902a92ee"
+      url "https://packages.rysh.ai/releases/v0.1.10/rysh_darwin_amd64.tar.gz"
+      sha256 "6e92ecfe826f892b10e27ac06f96d706ea6552b54bda55c2f39bdca7e282595d"
 
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
-        etc.install "rysh.config.example" => "rysh/rysh.config.example"
+        etc.install "rysh.config.yaml.example" => "rysh/rysh.config.yaml.example"
       end
     end
     if Hardware::CPU.arm?
-      url "https://packages.rysh.ai/releases/v0.1.9/rysh_darwin_arm64.tar.gz"
-      sha256 "cae67e63777e432a04ef03e2bc552153640031bbe511e37ed2c621a97d71e19e"
+      url "https://packages.rysh.ai/releases/v0.1.10/rysh_darwin_arm64.tar.gz"
+      sha256 "e8090e417f58fd73aa562838458588e1856be251348c03f5ad3054b5dadc7ad2"
 
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
-        etc.install "rysh.config.example" => "rysh/rysh.config.example"
+        etc.install "rysh.config.yaml.example" => "rysh/rysh.config.yaml.example"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://packages.rysh.ai/releases/v0.1.9/rysh_linux_amd64.tar.gz"
-      sha256 "b9e6ddcb463b346b088aaadc5508838f272e6ff377cca15f61c5efa20c55eb0f"
+      url "https://packages.rysh.ai/releases/v0.1.10/rysh_linux_amd64.tar.gz"
+      sha256 "30189107e8d22c434274ef5223992dd16bc5fcfdb205617e21e83db0edeccd3b"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
-        etc.install "rysh.config.example" => "rysh/rysh.config.example"
+        etc.install "rysh.config.yaml.example" => "rysh/rysh.config.yaml.example"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://packages.rysh.ai/releases/v0.1.9/rysh_linux_arm64.tar.gz"
-      sha256 "9b778a994c71657cf0283b3e55949d9730ef74a812240703df8fbe47302cc338"
+      url "https://packages.rysh.ai/releases/v0.1.10/rysh_linux_arm64.tar.gz"
+      sha256 "34db7815e0416816d03da17ae84632cb12fbf89a20a6be06c2c5d56fcddb8483"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
-        etc.install "rysh.config.example" => "rysh/rysh.config.example"
+        etc.install "rysh.config.yaml.example" => "rysh/rysh.config.yaml.example"
       end
     end
   end
