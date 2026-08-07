@@ -5,13 +5,13 @@
 class Ry < Formula
   desc "Agentic terminal multiplexer for code development"
   homepage "https://rysh.ai"
-  version "0.2.2"
+  version "0.2.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://packages.rysh.ai/releases/v0.2.2/ry_darwin_amd64.tar.gz"
-      sha256 "eb3c3d4b18cbd9de05ced2a870715263ba7d092a4d55faab3257c7b92a6a6408"
+      url "https://packages.rysh.ai/releases/v0.2.3/ry_darwin_amd64.tar.gz"
+      sha256 "e18cbcdb575df221c9381e73ff6627981cf2f4884294ca97d284f8dd27b03086"
 
       define_method(:install) do
         bin.install "ry"
@@ -20,8 +20,8 @@ class Ry < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://packages.rysh.ai/releases/v0.2.2/ry_darwin_arm64.tar.gz"
-      sha256 "36fd08995a671dd8222f862091a720c5a63d6ba2a84e34555d42f72bbb8f3473"
+      url "https://packages.rysh.ai/releases/v0.2.3/ry_darwin_arm64.tar.gz"
+      sha256 "1ae4d69ba9927b6ac149771d0825b1b943f67223324f7af618fe160c38dd360e"
 
       define_method(:install) do
         bin.install "ry"
@@ -33,8 +33,8 @@ class Ry < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://packages.rysh.ai/releases/v0.2.2/ry_linux_amd64.tar.gz"
-      sha256 "e2c6bc1370ff5b42083e04d14bc704dc034299a5a0657f7caff2804d0b75b7ee"
+      url "https://packages.rysh.ai/releases/v0.2.3/ry_linux_amd64.tar.gz"
+      sha256 "8793e040d472db1f6e8efa33cc06854a9be8b5c6c6da35bb7b5149ad78a98998"
       define_method(:install) do
         bin.install "ry"
         mkdir_p etc/"rysh"
@@ -42,8 +42,8 @@ class Ry < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://packages.rysh.ai/releases/v0.2.2/ry_linux_arm64.tar.gz"
-      sha256 "9acd07e5ac1a507edbb745cebaaf3f716fba7caee0184ac08f99fb35f580e64f"
+      url "https://packages.rysh.ai/releases/v0.2.3/ry_linux_arm64.tar.gz"
+      sha256 "cb10604ac308e97d4e7f6567a390e135c2b217d74891595bb7bf8132c9d496dd"
       define_method(:install) do
         bin.install "ry"
         mkdir_p etc/"rysh"
