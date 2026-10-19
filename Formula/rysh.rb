@@ -5,12 +5,13 @@
 class Rysh < Formula
   desc "Agentic terminal multiplexer for code development (open-source build)"
   homepage "https://github.com/rysh-ai/rysh-cli-parent"
+  version "0.2.11"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.9/rysh_darwin_amd64.tar.gz"
-      sha256 "21523080a4513a5a611000c057bd835d1e4497dc79b8130bffdc9cbb6d070de5"
+      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.11/rysh_darwin_amd64.tar.gz"
+      sha256 "6018e2a8f1f53d405360bd28c92335b131d34357a2b49a1233fc485c04ba1331"
 
       define_method(:install) do
         bin.install "rysh"
@@ -19,8 +20,8 @@ class Rysh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.9/rysh_darwin_arm64.tar.gz"
-      sha256 "ca8c6baff86723d685ba7677fb281d6988190873043d0f7643b769b2e52405d7"
+      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.11/rysh_darwin_arm64.tar.gz"
+      sha256 "65f5c92820fe5debc1e143373a6e93b5476694a2f9a3911518c98118aed99f6f"
 
       define_method(:install) do
         bin.install "rysh"
@@ -32,8 +33,8 @@ class Rysh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.9/rysh_linux_amd64.tar.gz"
-      sha256 "1bb2f5467c358761c885207cf639cc3b2e3737a0c9ca8e43865402f9da555740"
+      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.11/rysh_linux_amd64.tar.gz"
+      sha256 "528d1fdc60326aa0d7f95de3d47119585c09cbffd75d68d39ecadda0d1580b74"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
@@ -41,8 +42,8 @@ class Rysh < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.9/rysh_linux_arm64.tar.gz"
-      sha256 "617e556d2acb75312954b04c9d4b1d6ba918cdfdd32e71ca4c4ba76ea2281dca"
+      url "https://github.com/rysh-ai/rysh-cli-code/releases/download/v0.2.11/rysh_linux_arm64.tar.gz"
+      sha256 "3d9ff44ff7b30cff78bff9037806c2f1e9d5ab8ed862529d1c5300ffa27e42b1"
       define_method(:install) do
         bin.install "rysh"
         mkdir_p etc/"rysh"
