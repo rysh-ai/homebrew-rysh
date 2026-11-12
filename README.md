@@ -38,3 +38,5 @@ open-source formula:
 rm "$(brew --cellar)/rysh" "$(brew --prefix)/opt/rysh"
 brew install rysh-ai/rysh/rysh
 ```
+
+This tap has two formulas: `rysh` installs the open-source rysh command (`brew install rysh-ai/rysh/rysh`), and `ry` installs the rysh.ai private build (`brew install rysh-ai/rysh/ry`). For the open-source rysh, to report a bug or contribute, see [CONTRIBUTING.md in rysh-cli-code](https://github.com/rysh-ai/rysh-cli-code/blob/main/CONTRIBUTING.md); for security problems, see [SECURITY.md](https://github.com/rysh-ai/rysh-cli-code/blob/main/SECURITY.md).
