@@ -1,6 +1,6 @@
 # homebrew-rysh
 
-Homebrew tap for Rysh — agentic terminal multiplexer. It carries **two
+Homebrew tap for Rysh — agentic development environment. It carries **two
 builds, as two separate formulae**:
 
 | Formula | Build | Command | Install |
